@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alex Smith's blog featuring insights on game development, design, and more.">
+    <title>Blog - Alex Smith</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="logo">
+            <div class="logo-circle">A</div>
+            <span>Alex Smith</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">About Me</a>
+            <a href="resume.html">Resume</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Blog</h1>
+            <span class="my-diary">My Diary</span>
+        </div>
+
+        <div class="blog-grid">
+            <!-- Game Development Blog 1 -->
+            <article class="blog-card">
+                <img src="images/Ultra-Fast Trading_ Eliminate Slippage with VPS Hosting (MT4_MT5).jpg"
+                    alt="Game Development Tutorial" class="blog-image" onclick="showMoreInfo('gameDev1')">
+                <span class="category-tag">Game Development</span>
+                <div class="blog-content">
+                    <div class="blog-date">04 Jan 2025</div>
+                    <h2 class="blog-title" onclick="showMoreInfo('gameDev1')">How to Build a Successful Game: A
+                        Developer's Guide</h2>
+                </div>
+            </article>
+
+            <!-- Game Design Blog 2 -->
+            <article class="blog-card">
+                <img src="images/【ゲーミングルーム】ゲームのためのオシャレな部屋の作り方やレイアウトは？男子×女子別まとめ.jpg" alt="Game UI Design"
+                    class="blog-image" onclick="showMoreInfo('gameDesign1')">
+                <span class="category-tag">Game Design</span>
+                <div class="blog-content">
+                    <div class="blog-date">03 Jan 2025</div>
+                    <h2 class="blog-title" onclick="showMoreInfo('gameDesign1')">Creating Intuitive Game UI: A
+                        Designer’s Guide</h2>
+                </div>
+            </article>
+
+            <!-- Animation Blog -->
+            <article class="blog-card">
+                <img src="images/Understanding Audience Emotions_ The Role of AI in Video Sentiment Analysis.jpg"
+                    alt="Animation Techniques" class="blog-image" onclick="showMoreInfo('animationTechniques')">
+                <span class="category-tag">Animation</span>
+                <div class="blog-content">
+                    <div class="blog-date">02 Jan 2025</div>
+                    <h2 class="blog-title" onclick="showMoreInfo('animationTechniques')">Mastering Animation Techniques:
+                        From Concept to Creation</h2>
+                </div>
+            </article>
+
+            <!-- VR Gaming Blog -->
+            <article class="blog-card">
+                <img src="images/A virtual reality.jpg" alt="Virtual Reality Gaming" class="blog-image"
+                    onclick="showMoreInfo('vrGaming')">
+                <span class="category-tag">Gaming</span>
+                <div class="blog-content">
+                    <div class="blog-date">01 Jan 2025</div>
+                    <h2 class="blog-title" onclick="showMoreInfo('vrGaming')">Exploring Virtual Reality: The Future of
+                        Gaming</h2>
+                </div>
+            </article>
+
+            <!-- Game Development Blog 2 -->
+            <article class="blog-card">
+                <img src="images/Průvodce Unity Enginem a Unity produkty _ VRapps_cz.jpg" alt="Game Programming"
+                    class="blog-image" onclick="showMoreInfo('gameDev2')">
+                <span class="category-tag">Game Development</span>
+                <div class="blog-content">
+                    <div class="blog-date">30 Dec 2024</div>
+                    <h2 class="blog-title" onclick="showMoreInfo('gameDev2')">Mastering Unity: A Beginner’s Guide to
+                        Game Programming</h2>
+                </div>
+            </article>
+
+            <!-- Game Design Blog 3 -->
+            <article class="blog-card">
+                <img src="images/Los ASUS ROG Phone 5s y 5s Pro llegan a España_ precio y disponibilidad de estos dos bestiales móviles gaming.jpg"
+                    alt="Mobile Game UI Design" class="blog-image" onclick="showMoreInfo('mobileGameUI')">
+                <span class="category-tag">Game Design</span>
+                <div class="blog-content">
+                    <div class="blog-date">28 Dec 2024</div>
+                    <h2 class="blog-title" onclick="showMoreInfo('mobileGameUI')">Designing UI for Mobile Games: Trends
+                        & Best Practices</h2>
+                </div>
+            </article>
+        </div>
+
+        <!-- Blog Details Popup -->
+        <div id="blogDetails" class="popup">
+            <div id="blogDetailsContent">
+                <!-- Content will be populated dynamically -->
+            </div>
+            <button class="close-btn" onclick="closeBlogDetails()">&#10006;</button>
+        </div>
+
+
+        <div style="text-align: center;">
+            <a href="#" class="see-all-btn">See All Posts</a>
+        </div>
+    </div>
+    <script>
+        // Mapping blog IDs to their content
+        const randomBorders = [
+            '5px solid #FF5733', // Orange
+            '5px solid #33FF57', // Green
+            '5px solid #5733FF', // Blue
+            '5px dashed #FF33A8', // Pink dashed
+            '5px dotted #33A8FF'  // Blue dotted
+        ];
+
+        // Function to get a random border style from the array
+        function getRandomBorder() {
+            return randomBorders[Math.floor(Math.random() * randomBorders.length)];
+        }
+
+        const blogContent = {
+            gameDev1: {
+                title: "How to Build a Successful Game: A Developer's Guide",
+                content: `
+            <img src="images/Ultra-Fast Trading_ Eliminate Slippage with VPS Hosting (MT4_MT5).jpg" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-bottom: 20px; border: ${getRandomBorder()};">
+            <p>Game development is an exciting journey that involves creativity, technical skills, and strategic planning. In this guide, we will walk through the essential steps of creating a game, from initial concepts to the final product.</p>
+            <p><strong>Step 1: Conceptualization</strong><br> Every successful game starts with a clear concept. Think about the genre, story, mechanics, and overall vision. A solid concept will guide your game through development stages.</p>
+            <p><strong>Step 2: Design</strong><br> Designing game mechanics, levels, and characters is key to making your game enjoyable. You will need to plan each aspect, ensuring that it complements the core gameplay.</p>
+            <p><strong>Step 3: Development</strong><br> With a design in place, you’ll need to start coding and prototyping. Unity, Unreal Engine, and other game engines provide excellent tools to start building your game.</p>
+            <p><strong>Step 4: Testing & Launch</strong><br> Finally, testing your game is essential. You must fix bugs, refine gameplay, and ensure a smooth experience for players before launching it on different platforms.</p>
+            <p>Developing games requires passion, technical knowledge, and patience, but with the right approach, anyone can build a great game.</p>
+        `
+            },
+            gameDesign1: {
+                title: "Creating Intuitive Game UI: A Designer’s Guide",
+                content: `
+            <img src="images/【ゲーミングルーム】ゲームのためのオシャレな部屋の作り方やレイアウトは？男子×女子別まとめ.jpg" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-bottom: 20px; border: ${getRandomBorder()};">
+            <p>Designing user interfaces for games is a crucial skill. A great UI design can significantly enhance player experience, while poor design can lead to frustration. Here are some key tips for creating intuitive game UI:</p>
+            <p><strong>1. Keep it Simple</strong><br> Avoid cluttering the screen with unnecessary elements. Players should easily understand how to navigate the UI, even in complex games.</p>
+            <p><strong>2. Consistency is Key</strong><br> Maintain a consistent style throughout the game. Buttons, icons, and menus should all follow a similar visual language to create a cohesive experience.</p>
+            <p><strong>3. Prioritize Accessibility</strong><br> Make sure that your UI is accessible to all players, including those with disabilities. High contrast, clear fonts, and adjustable options can make a big difference.</p>
+            <p>Creating a user-friendly interface can enhance immersion and player retention. A well-designed UI should be an extension of the game’s theme, guiding players effortlessly.</p>
+        `
+            },
+            animationTechniques: {
+                title: "Mastering Animation Techniques: From Concept to Creation",
+                content: `
+            <img src="images/Understanding Audience Emotions_ The Role of AI in Video Sentiment Analysis.jpg" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-bottom: 20px; border: ${getRandomBorder()};">
+            <p>Animation is essential in bringing your game to life. Whether you are animating characters, environments, or UI elements, there are some fundamental principles you should follow to create realistic and engaging animations:</p>
+            <p><strong>1. Understand the Basics</strong><br> Learn the 12 principles of animation, such as timing, spacing, and squash & stretch, to ensure that your animations feel alive.</p>
+            <p><strong>2. Use Reference Materials</strong><br> Study real-life movements to create more believable animations. Whether it’s how a character walks or how a tree sways in the wind, references can guide you in making more realistic animations.</p>
+            <p><strong>3. Polish Your Animations</strong><br> Refining the details in your animation, such as adding secondary movements and small gestures, will create more engaging and dynamic scenes.</p>
+            <p>Animation is about making your world feel alive. Whether it's a character’s walk cycle or an explosion, paying attention to detail makes all the difference.</p>
+        `
+            },
+            vrGaming: {
+                title: "Exploring Virtual Reality: The Future of Gaming",
+                content: `
+            <img src="images/A virtual reality.jpg" alt="Virtual Reality Gaming" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-bottom: 20px; border: ${getRandomBorder()};">
+            <p>Virtual Reality (VR) is one of the most exciting technologies revolutionizing the gaming world. VR immerses players in virtual environments, providing an unparalleled level of interactivity and immersion. Here’s why VR gaming is the future:</p>
+            <p><strong>1. Immersive Gameplay</strong><br> VR offers a deeper, more immersive experience than traditional gaming. Players can physically interact with the game world, increasing the sense of presence.</p>
+            <p><strong>2. Innovative Game Design</strong><br> VR opens up new possibilities for game design, from realistic simulations to completely abstract experiences. Game mechanics can evolve to take full advantage of this technology.</p>
+            <p><strong>3. Expanding Accessibility</strong><br> VR also provides new opportunities for accessible gaming, allowing players with disabilities to enjoy games in ways that were previously impossible.</p>
+            <p>With advancements in VR hardware, the gaming industry will continue to innovate, offering players a fully immersive experience that traditional gaming just can't match.</p>
+        `
+            },
+            gameDev2: {
+                title: "Mastering Unity: A Beginner’s Guide to Game Programming",
+                content: `
+            <img src="images/Průvodce Unity Enginem a Unity produkty _ VRapps_cz.jpg" alt="Unity Game Development" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-bottom: 20px; border: ${getRandomBorder()};">
+            <p>Unity is one of the most popular game engines for both beginner and experienced developers. In this guide, we’ll cover the basics of Unity game programming:</p>
+            <p><strong>1. Setting Up Your First Project</strong><br> Unity’s interface is user-friendly, but you’ll need to familiarize yourself with its layout. We’ll start with setting up a new project and importing assets.</p>
+            <p><strong>2. Basic Scripting in C#</strong><br> Unity uses C# for scripting, which you’ll use to create interactive game elements. We’ll go over simple scripts to move objects and interact with players.</p>
+            <p><strong>3. Building and Publishing Your Game</strong><br> Once your game is ready, you can build and publish it on various platforms. Unity supports PC, mobile, VR, and console publishing.</p>
+            <p>Unity is a versatile engine that is perfect for both beginners and professionals. With the right resources, anyone can use Unity to bring their game ideas to life.</p>
+        `
+            },
+            mobileGameUI: {
+                title: "Designing UI for Mobile Games: Trends & Best Practices",
+                content: `
+            <img src="images/Los ASUS ROG Phone 5s y 5s Pro llegan a España_ precio y disponibilidad de estos dos bestiales móviles gaming.jpg" alt="Mobile Game UI Design" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-bottom: 20px; border: ${getRandomBorder()};">
+            <p>Mobile game development is a rapidly growing sector, and designing UI for these games comes with unique challenges. Here are some tips for creating effective mobile game UIs:</p>
+            <p><strong>1. Touchscreen Optimization</strong><br> Mobile games rely on touch input, so it’s essential to design UI elements that are easy to interact with using fingers. Buttons and menus should be large enough and spaced well.</p>
+            <p><strong>2. Simplify Navigation</strong><br> Mobile screens are smaller, so you must simplify navigation to ensure a smooth experience. Minimize the number of clicks needed to access different parts of the game.</p>
+            <p><strong>3. Responsive Design</strong><br> Ensure your UI works across different devices and screen sizes. You can use responsive design techniques to ensure that the UI adapts to different resolutions.</p>
+            <p>Mobile games have specific UI needs due to the constraints of screen size. By focusing on user experience and interactivity, you can create mobile UIs that players will love.</p>
+        `
+            }
+        };
+
+
+        // Show content in the popup
+        function showMoreInfo(blogId) {
+            const blog = blogContent[blogId];
+
+            if (blog) {
+                document.getElementById("blogDetailsContent").innerHTML = `
+                    <h2>${blog.title}</h2>
+                    <div>${blog.content}</div>
+                `;
+                document.getElementById("blogDetails").style.display = "flex";
+            } else {
+                document.getElementById("blogDetailsContent").innerHTML = "<h2>Article Not Found</h2>";
+                document.getElementById("blogDetails").style.display = "flex";
+            }
+        }
+
+        // Close the popup
+        function closeBlogDetails() {
+            document.getElementById("blogDetails").style.display = "none";
+        }
+    </script>
+
+
+
+    <footer>
+        <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>© 2020 All rights reserved. LMPix</p>
+    </footer>
+
+    <a href="#" class="back-to-top">↑</a>
+</body>
+
+</html>

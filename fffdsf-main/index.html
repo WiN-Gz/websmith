@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-circle">A</div>
+            <span>Alex Smith</span>
+        </div>
+        <nav class="nav">
+            <a href="#about">About Me</a>
+            <a href="resume.html">Resume</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image">
+            <img src="images/jhnwck.jpg" alt="Profile Image">
+        </div>
+        <div class="hero-content">
+            <h1>Frontend Developer</h1>
+            <p>I specialize in creating beautiful, functional, and responsive websites that help businesses grow and
+                succeed online.</p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-primary">Download
+                CV</a>
+            <a href="#" class="btn btn-secondary">Contact</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2 class="section-title">What I Do</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i>✍️</i>
+                <h3>Copywrite</h3>
+                <p>Creating compelling content that engages audiences and drives conversions.</p>
+            </div>
+            <div class="service-card">
+                <i>🎨</i>
+                <h3>Web Design</h3>
+                <p>Designing intuitive and visually appealing interfaces that users love.</p>
+            </div>
+            <div class="service-card">
+                <i>🛒</i>
+                <h3>Ecommerce</h3>
+                <p>Building robust online stores that drive sales and growth.</p>
+            </div>
+            <div class="service-card">
+                <i>📈</i>
+                <h3>Marketing</h3>
+                <p>Implementing strategies that increase visibility and reach.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"Outstanding work and attention to detail. Highly recommended!"</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="images/File_Mangekyou Sharingan Sasuke (Eternal)_svg - Wikimedia Commons.jpg" alt="Client">
+                    </div>
+                    <div>
+                        <h4>John Smith</h4>
+                        <p>CEO, TechCorp</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Exceptional service and professional approach to every project."</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="images/Rinnegan Supreme Sharingan.jpg" alt="Client">
+                    </div>
+                    <div>
+                        <h4>Sarah Johnson</h4>
+                        <p>Marketing Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fun-facts">
+        <h2 class="section-title">Fun Facts</h2>
+        <div class="facts-grid">
+            <div class="fact-card">
+                <i>❤️</i>
+                <div class="fact-number">578</div>
+                <p>Happy Clients</p>
+            </div>
+            <div class="fact-card">
+                <i>⌚</i>
+                <div class="fact-number">4,780</div>
+                <p>Working Hours</p>
+            </div>
+            <div class="fact-card">
+                <i>⭐</i>
+                <div class="fact-number">15</div>
+                <p>Awards Won</p>
+            </div>
+            <div class="fact-card">
+                <i>☕</i>
+                <div class="fact-number">1,286</div>
+                <p>Coffee Consumed</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <h2 class="section-title">Pricing</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Silver</h3>
+                <div class="price">$64</div>
+                <p>per month</p>
+                <a href="#" class="btn btn-primary">Free Trial</a>
+            </div>
+            <div class="price-card">
+                <h3>Gold</h3>
+                <div class="price">$128</div>
+                <p>per month</p>
+                <a href="#" class="btn btn-primary">Free Trial</a>
+            </div>
+            <div class="price-card">
+                <h3>Platinum</h3>
+                <div class="price">$256</div>
+                <p>per month</p>
+                <a href="#" class="btn btn-primary">Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 All rights reserved</p>
+        <div class="social-links">
+            <a href="#" onclick="playMeme('https://www.myinstants.com/media/sounds/vine-boom.mp3')">Twitter</a>
+            <a href="#" onclick="playMeme('https://www.myinstants.com/media/sounds/bruh.mp3')">Facebook</a>
+            <a href="#" onclick="playMeme('https://www.myinstants.com/media/sounds/omae-wa-mou-shindeiru.mp3')">Instagram</a>
+        </div>
+        
+        <script>
+        function playMeme(meme) {
+            const audio = new Audio(meme);
+            audio.play();
+        }
+        </script>
+        
+    </footer>
+</body>
+
+</html>
